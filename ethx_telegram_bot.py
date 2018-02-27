@@ -33,7 +33,7 @@ def on_chat_message(msg):
     markup = ReplyKeyboardMarkup(keyboard=[
                      [KeyboardButton(text='Bitcoin Price')],
                      [KeyboardButton(text='Etherium Price')],
-                      [KeyboardButton(text='Litcoin Price')],
+                      [KeyboardButton(text='Litecoin Price')],
                  ])
     message = msg['text']
     if message=="/start":
@@ -43,7 +43,7 @@ def on_chat_message(msg):
         bot.sendMessage(chat_id, bit_price(), reply_markup=markup)
     if message=="Etherium Price":
         bot.sendMessage(chat_id, eth_price(), reply_markup=markup)
-    if message=="Litcoin Price":
+    if message=="Litecoin Price":
         bot.sendMessage(chat_id, ltc_price(), reply_markup=markup)
 
 
