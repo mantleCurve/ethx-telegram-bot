@@ -31,12 +31,13 @@ def on_chat_message(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
 
     markup = ReplyKeyboardMarkup(keyboard=[
-                     [KeyboardButton(text='Buy Price')],
-                     [KeyboardButton(text='Sell Price')],
+                     [KeyboardButton(text='Bitcoin Price')],
+                     [KeyboardButton(text='Etherium Price')],
+                      [KeyboardButton(text='Litcoin Price')],
                  ])
     message = msg['text']
     if message=="/start":
-        bot.sendMessage(chat_id, 'Get Etherium prices from ETHX.IN', reply_markup=markup)
+        bot.sendMessage(chat_id, 'Get crypto prices from ETHX.IN', reply_markup=markup)
     
     if message=="Bitcoin Price":
         bot.sendMessage(chat_id, bit_price(), reply_markup=markup)
